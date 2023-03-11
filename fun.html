@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		function
+
+
+
+	</title>
+	<style>
+		
+		.button-36 {
+  background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  height: 4rem;
+  padding: 0 1.6rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all .5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-36:hover {
+  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+  transition-duration: .1s;
+}
+
+@media (min-width: 768px) {
+  .button-36 {
+    padding: 0 2.6rem;
+  }
+}
+
+.button-36{
+
+  width: 90%;
+  margin: 20px;
+}
+
+
+
+.button{
+
+  width: 90%;
+  margin: 20px;
+}
+
+		body{
+			background-color: #d8e825;
+			color: #1436e0;
+			font-size: 34px;
+		}
+	</style>
+</head>
+<body>
+<a href="index.html" target="_blank"><button class="button-36" role="button">lobby</button>
+
+<script type="text/javascript"> 
+/*function max(x,y) {
+	if (x>y){
+		return x
+	} else {
+		return y 
+	}
+}
+alert (max(30,15)) 
+alert (max(6,150))*/
+    
+	/*function power(x,n){
+	let power=1
+	for (let i=1;i<=n;i++) {
+    power=power*x
+
+	}return power 
+	
+	}
+	
+
+let x=prompt('Ведіть х', 2)
+let n=prompt('Ведіть n', 5)
+if (n>1){
+	alert(power(x,n))
+}
+else{
+	alert('такої степені не існує')
+} 
+/*let factorial =1
+let n=prompt('Ведіть n', 5)
+	for (let i=1;i<=n;i++) {
+factorial=factorial*i 
+}
+alert(factorial)
+
+
+
+	let x=+prompt('Ведіть число від 0 до 1 ', 0.1)
+		let y=+prompt('Ведіть число від 0 до 1 ', 0.1)
+   		if (x>0&&x<1&&y>0&&y<1){
+   			
+   			alert((x+y).toFixed(1))
+   		}
+   		else {
+   			alert('Ви ввели число не в діапазоні')
+   		}*/
+   		
+let compliments=['beautiful', 'cute', 'smart','clever', 'funny' , 'comunicable' , 'charming', 'slender']
+
+let animals=['cat', 'dog', 'bird','cow','butterfly','duck','rabbit','ladybug','deer','monkey']
+let number=prompt('How many compliments do you wanna?', 100)
+
+for (let i=1;i<=number;i++){
+	let position1 =Math.floor(Math.random()*compliments.length)
+let position2 =Math.floor(Math.random()*animals.length) 
+	document.writeln(i+') You are so '+compliments[position1]+' as '+animals[position2]+'<br>')
+
+}
+
+
+
+
+</script>
+</body>
+</html>

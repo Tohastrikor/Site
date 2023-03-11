@@ -1,0 +1,195 @@
+
+
+header{
+	height: 250px;
+	background-color: lightcyan;
+}
+#menu{
+	width: 20%;
+	height: 900px;
+	background-color: greenyellow;
+	float: left;
+  font-family: sans-serif;
+}
+#content ,h3{
+
+width: 80%;
+height: 600px;
+background-color: lavender;
+float: left;
+font-family: sans-serif;
+font-size: 30px;
+
+}
+footer{
+
+	background-color: lightblue;
+	height: 100px;
+	clear: both;
+  font-family: sans-serif;
+  list-style: none;
+  
+
+
+}
+.dd{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.gg video{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: 1;
+
+}
+.govideo{
+  z-index: 2;
+  color: white;
+}
+
+
+.dd video{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: 1;
+
+
+}
+
+
+.textvideo{
+  z-index: 2;
+  color: white;
+}
+
+.sm ul{
+  width: 50px;
+  height: 50px;
+  list-style: none;
+  display: flex;
+  margin: 3px;
+
+}
+.sm li{
+  margin-left: 12px;
+}
+
+
+
+.button-36 {
+  background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  height: 4rem;
+  padding: 0 1.6rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all .5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-36:hover {
+  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+  transition-duration: .1s;
+}
+
+@media (min-width: 768px) {
+  .button-36 {
+    padding: 0 2.6rem;
+  }
+}
+
+.button-36{
+
+  width: 90%;
+  margin: 20px;
+}
+
+
+
+.button{
+
+  width: 90%;
+  margin: 20px;
+}
+.li{
+  width: 50px;
+  height: 50px;
+}
+
+$d: 70;      // density
+$w: 600;     // grid size
+$s: 3s;       // speed
+
+// Generate the snow image using radial gradients
+$grad: grad;
+@for $i from 0 to $d {
+  $v: random(4) + 2;
+  $a: random(5) * .1 + .5;
+  $grad: $grad, radial-gradient(
+      $v+px $v+px at
+      (random($w - $v * 2) + $v)+px
+      (random($w - $v * 2) + $v)+px, 
+      rgba(255,255,255,$a) 50%,
+      rgba(0,0,0,0)
+  ) !global;
+}
+
+// The CSS
+html {
+  height: 100%;
+  background: linear-gradient(#123 30%, #667);
+  overflow: hidden;
+}
+.menu, .menu:before, .snow:after {
+  position: absolute;
+  top: -$w + px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: $grad;
+  background-size: $w + px $w + px;
+  animation: snow $s linear infinite;
+  content: "";
+}
+.menu:after {
+  margin-left: -$w/3 + px;
+  opacity: .4;
+  animation-duration: $s*2;
+  animation-direction: reverse;
+  filter: blur(3px);
+}
+.menu:before {
+  animation-duration: $s*3;
+  animation-direction: reverse;
+  margin-left: -$w/2 + px;
+  opacity: .65;
+  filter: blur(1.5px);
+}
+@keyframes menu {
+  to {
+    transform: translateY($w + px);
+  }
+}
